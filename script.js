@@ -88,10 +88,36 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
+// Function to prompt user for password options --> I want it to keep asking until they input the correct options. e.g. correct number and how many 
 function getPasswordOptions() {
+  let characterLength;
 
+  while (true) {
+    characterLength = parseInt(prompt('How many characters would you like your password to be?'));
+
+    if (!isNaN(characterLength) && characterLength >= 8 && characterLength <= 128) {
+      break;
+    } else {
+      alert('Character length must be a number between 8 and 128');
+    }}
+
+    let containsSpecialCharacters = confirm('Would you like your password to contain special characters?');
+    let containsNumbers = confirm('Would you like your password to contain numbers?');
+    let containsLowerCase = confirm('Would you like your password to contain lower case letters?');
+    let containsUpperCase = confirm('Would you like your password to contain upper case letters?');
+
+  
+    
+    return { 
+      length: characterLength,
+      hasSpecialCharacters: containsSpecialCharacters,
+      hasNumbers: containsNumbers
+      hasLowerCase: containsLowerCase,
+      hasUpperCase: containsUpperCase,
+    }
 }
+
+getPasswordOptions()
 
 // Function for getting a random element from an array
 function getRandom(arr) {
