@@ -100,29 +100,43 @@ function getPasswordOptions() {
     } else {
       alert('Character length must be a number between 8 and 128');
     }}
+   
+    let containsSpecialCharacters, containsNumbers, containsLowerCase, containsUpperCase;
 
-    let containsSpecialCharacters = confirm('Would you like your password to contain special characters?');
-    let containsNumbers = confirm('Would you like your password to contain numbers?');
-    let containsLowerCase = confirm('Would you like your password to contain lower case letters?');
-    let containsUpperCase = confirm('Would you like your password to contain upper case letters?');
-
+    while (true) {
+      containsSpecialCharacters = confirm('Would you like your password to contain special characters?');
+      containsNumbers = confirm('Would you like your password to contain numbers?');
+      containsLowerCase = confirm('Would you like your password to contain lower case letters?');
+      containsUpperCase = confirm('Would you like your password to contain upper case letters?');
   
-    
+      if (containsSpecialCharacters || containsNumbers || containsLowerCase || containsUpperCase) 
+      {
+        break; 
+      } else {
+        alert('Password must contain at least one character type!');
+      }
+
+    }
+
     return { 
       length: characterLength,
       hasSpecialCharacters: containsSpecialCharacters,
-      hasNumbers: containsNumbers
+      hasNumbers: containsNumbers,
       hasLowerCase: containsLowerCase,
       hasUpperCase: containsUpperCase,
     }
 }
 
-getPasswordOptions()
 
 // Function for getting a random element from an array
 function getRandom(arr) {
+var randomIndex = Math.floor(Math.random()*arr.length);
+console.log(arr[randomIndex]);
+return arr[randomIndex];
 
 }
+
+
 
 // Function to generate password with user input
 function generatePassword() {
