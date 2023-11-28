@@ -1,56 +1,42 @@
 # random-password-generator
 
-# Console Finances 
+# Random Password Generator
 
 
 ## Description
 
-This is my first javascript challenge which takes a sample set of financial data with months and corresponding profit.
-
-The instructions were as follow:
-
-* The total number of months included in the dataset.
-
-* The net total amount of Profit/Losses over the entire period.
-
-* The average of the **changes** in Profit/Losses over the entire period.
-  * You will need to track what the total change in Profit/Losses are from month to month and then find the average.
-  * (`Total/(Number of months - 1)`)
-
-* The greatest increase in Profit/Losses (date and amount) over the entire period.
-
-* The greatest decrease in Profit/Losses (date and amount) over the entire period.
+This is a password generator developed for my bootcamp challenge. The starter code included the full HTML and CSS files as well as some of the javascript functionality such as the button triggering. All starter code is commented as well as the code which I developed myself.
 
 
 
 
 ## Installation
 
-This is a webpage, the link to which can be found below:
-https://ajayabt.github.io/Console-Finances/
+This is a webpage, the link to which can be found below: https://ajayabt.github.io/random-password-generator/
 
 
-additionally, this is the link to the github repository:
 
-https://github.com/ajayabt/Console-Finances/settings/pages
+additionally, this is the link to the github repository: https://github.com/ajayabt/random-password-generator
+
+
 
 ## Usage
 
-This webpage is designed to calculate certain aspects of a specific set of data. Data in the "finances" array can be changed, or added to, however currently only through adding to the array within VScode. 
+This webpage is designed to generate a random password based on user selections regarding character length and type of characters to include. It returns alerts if the options selected do not fit the outlined criteria. 
 
 
 
 
 ## Credits
-All work is my own, Thank you to the bootcamp instructors and TAs who have enabled me to get this far!
+Starter code comes from the bootcamp team and is commented in the javascript file. As mentioned, the HTML and CSS is a part of the starter file. Thank you to the bootcamp instructors and TAs who have enabled me to get this far!
 
 ## Screenshot and links
 
-![Alt text](<Images/Captura de pantalla 2023-11-14 123256.png>)
+Screenshot: ![Alt text](<assets/Web capture_28-11-2023_124338_127.0.0.1.jpeg>)
 
-GitHub LINK: https://github.com/ajayabt/Console-Finances/settings/pages
+GitHub LINK: https://github.com/ajayabt/random-password-generator
 
-Deployed app link: https://ajayabt.github.io/Console-Finances/
+Deployed app link: https://ajayabt.github.io/random-password-generator/
 
 
 ## License
