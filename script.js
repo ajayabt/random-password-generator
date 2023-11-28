@@ -1,4 +1,4 @@
-// Array of special characters to be included in password
+// Array of special characters to be included in password - STARTER CODE
 var specialCharacters = [
   '@',
   '%',
@@ -25,10 +25,10 @@ var specialCharacters = [
   '.'
 ];
 
-// Array of numeric characters to be included in password
+// Array of numeric characters to be included in password- STARTER CODE
 var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-// Array of lowercase characters to be included in password
+// Array of lowercase characters to be included in password - STARTER CODE
 var lowerCasedCharacters = [
   'a',
   'b',
@@ -58,7 +58,7 @@ var lowerCasedCharacters = [
   'z'
 ];
 
-// Array of uppercase characters to be included in password
+// Array of uppercase characters to be included in password - STARTER CODE
 var upperCasedCharacters = [
   'A',
   'B',
@@ -88,7 +88,7 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options --> I want it to keep asking until they input the correct options. e.g. correct number and how many 
+// Function to prompt user for password options --> I want it to keep asking until they input the correct options. e.g. correct number and how many -- MY CODE
 function getPasswordOptions() {
   let characterLength;
 
@@ -128,9 +128,9 @@ function getPasswordOptions() {
 }
 
 //Call function to get selections from user:
-getPasswordOptions()
 
-// Function for getting a random element from an array
+
+// Function for getting a random element from an array -- MY CODE
 function getRandom(arr) {
 var randomIndex = Math.floor(Math.random()*arr.length);
 console.log(arr[randomIndex]);
@@ -139,7 +139,7 @@ return arr[randomIndex];
 
 
 
-// Function to generate password with user input
+// Function to generate password with user input -- MY CODE
 
 
 function generatePassword() {
@@ -158,17 +158,17 @@ function generatePassword() {
     possibleCharacters = possibleCharacters.concat(upperCasedCharacters)
   }
   var userPassword = '';
-  for (let i = 0; i < characterLength.length; i++) {
-    userPassword += getRandom(possibleCharacters)
+  for (let i = 0; i < passwordOptions.length; i++) {
+    userPassword += getRandom(possibleCharacters) 
     
   }
   return userPassword
 }
 
-// Get references to the #generate element
+// Get references to the #generate element --STARTER CODE
 var generateBtn = document.querySelector('#generate');
 
-// Write password to the #password input
+// Write password to the #password input -- STARTER CODE
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
@@ -176,5 +176,5 @@ function writePassword() {
   passwordText.value = password;
 }
 
-// Add event listener to generate button
+// Add event listener to generate button --STARTER CODE
 generateBtn.addEventListener('click', writePassword);
